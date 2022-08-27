@@ -30,6 +30,26 @@ router.get("/:id", (req, res, next) => {
   res.json(product);
 });
 
+//* Rizal's variation
+// router.get("/:id", (req, res) => {
+//   try {
+//     const product = products.find(
+//       (product) => product.id === String(req.params.id)
+//     );
+//     if (!product) {
+//       res.status(404).json({
+//         message: "Not found",
+//       });
+//     }
+//     res.status(200).json(product);
+//   } catch (err) {
+//     res.status(404).json({
+//       message: "Not found",
+//     });
+//     throw err;
+//   }
+// });
+
 router.post("/", (req, res, next) => {
   const { body } = req;
 
